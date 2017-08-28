@@ -42,6 +42,7 @@
     "babel-preset-stage-2": "^6.24.1",
     "enzyme": "^2.9.1",
     "enzyme-to-json": "^1.5.1",
-    "jest": "^20.0.4"
+    "jest": "^20.0.4",
+    "underscore": "^1.8.3"
   }
 }

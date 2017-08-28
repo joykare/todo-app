@@ -87,7 +87,7 @@ class App extends Component {
               <input
                 type="text"
                 className="form-control"
-                placeholder="Enter todo due date"
+                placeholder="Enter date in the format mm.dd.yyyy"
                 onBlur={(event) => {
                   this.setState({
                     date: event.target.value

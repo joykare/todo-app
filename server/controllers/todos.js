@@ -1,4 +1,5 @@
 const Todos = require("../models/todos.js");
+const _ = require("underscore");
 
 module.exports = {
   add: (req, res) => {
@@ -27,7 +28,7 @@ module.exports = {
           message: "Error occured while finding"
         })
       } else {
-        res.status(200).send(todos);
+        res.status(200).send(_.sortBy(todos, "dueDate"));
       }
     })
   },
