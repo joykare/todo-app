@@ -33,11 +33,22 @@ module.exports = {
     })
   },
 
+  delete: (req, res) => {
+    Todos.findByIdAndRemove(req.params.id, function(err) {
+      if (err) {
+        res.status(500).send({
+          message: "Error occured while deleting"
+        })
+      } else {
+        res.status(200).send({
+          message: "Todo deleted successfully"
+        })
+      }
+    });
+
+  }
+
   // edit: (req, res) => {
 
   // },
-
-  // delete: (req, res) => {
-
-  // }
 }
