@@ -3,7 +3,8 @@ const app = express();
 const mongoose = require("mongoose");
 const cors = require("cors");
 const bodyParser = require("body-parser");
-const seed = require("./util/seed.js")
+const seed = require("./util/seed.js");
+const Todos = require("./server/models/todos.js")
 
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
@@ -18,7 +19,7 @@ mongoose.connect('mongodb://localhost:27017/todo', (err) => {
 });
 
 mongoose.connection.on("connected", (err) => {
-  Todo.remove({}, () => {
+  Todos.remove({}, () => {
     if(err){
       console.log("error on removed");
     } else {
@@ -26,7 +27,9 @@ mongoose.connection.on("connected", (err) => {
     }
   });
 
-  Todo.create(seed.todos, () => {
+  console.log("seed todos", seed.todos);
+
+  Todos.create(seed.todos, () => {
     if (err) {
       console.log("error on created");
     } else {
