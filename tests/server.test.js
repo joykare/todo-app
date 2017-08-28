@@ -9,7 +9,7 @@ describe("Server side methods", () => {
       .end((err, res) => {
         expect(res.status).to.equal(200);
         expect(res.body).to.exist;
-        expect(res.body.todos).to.be.an("array");
+        expect(res.body).to.be.an("array");
         done();
       });
   });
@@ -24,7 +24,7 @@ describe("Server side methods", () => {
       })
       .end((err, res) => {
         expect(res.status).to.equal(200);
-        expect(res.body.message).to.equal("Todo successfully added");
+        expect(res.body.message).to.equal("Todo saved successfully");
         done();
       })
   })
