@@ -20,7 +20,7 @@ class App extends Component {
     request
       .get("http://localhost:3000/api/todos")
       .then((res) => {
-        console.log("todos", res.body);
+        // console.log("todos", res.body);
         this.setState({
           todos: res.body
         })
@@ -37,13 +37,13 @@ class App extends Component {
         dueDate: new Date(this.state.date)
       })
       .then((res) => {
-        console.log("todos", res.body);
+        // console.log("todos", res.body);
         this.fetchTodos();
       })
   }
 
   render() {
-    console.log("this.state", this.state.todos);
+    // console.log("this.state", this.state.todos);
     return (
       <div>
         <div className="text-center">
@@ -51,7 +51,7 @@ class App extends Component {
         </div>
         <hr />
 
-        <div className="jumbotron">
+        <div className="jumbotron" style={{marginLeft: 250, marginRight: 250,}}>
           <form onSubmit={this.handleSubmit}>
 
             <div className="form-group">
@@ -96,11 +96,11 @@ class App extends Component {
               />
             </div>
 
-            <button type="submit" className="btn btn-primary">Submit</button>
+            <button type="submit" className="btn btn-primary">Add Todo</button>
           </form>
         </div>
 
-        {this.state.todos ? this.state.todos.map((todo) => (
+        {this.state.todos.length ? this.state.todos.map((todo) => (
           <div className="list-group" key={todo._id} style={{marginLeft: 100, marginRight: 100, marginTop: 20, marginBottom:20}}>
             <div className="list-group-item list-group-item-action flex-column align-items-start">
               <div className="d-flex w-100 justify-content-between">
@@ -110,7 +110,7 @@ class App extends Component {
               <p className="mb-1">{todo.description}</p>
             </div>
           </div>
-        )) : <div>Loading..</div>}
+        )) : <div className="loading">Loading..</div>}
       </div>
 
 

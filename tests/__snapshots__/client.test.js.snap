@@ -2,6 +2,77 @@
 
 exports[`Tests for <App /> Component takes a snapshot of the app component 1`] = `
 <div>
-  Hey There
+  <div
+    className="text-center"
+  >
+    <h4>
+      Todo App
+    </h4>
+  </div>
+  <hr />
+  <div
+    className="jumbotron"
+    style={
+      Object {
+        "marginLeft": 250,
+        "marginRight": 250,
+      }
+    }
+  >
+    <form
+      onSubmit={[Function]}
+    >
+      <div
+        className="form-group"
+      >
+        <label>
+          Title:
+        </label>
+        <input
+          className="form-control"
+          onBlur={[Function]}
+          placeholder="Enter todo title"
+          type="text"
+        />
+      </div>
+      <div
+        className="form-group"
+      >
+        <label>
+          Description
+        </label>
+        <input
+          className="form-control"
+          onBlur={[Function]}
+          placeholder="Enter todo description"
+          type="text"
+        />
+      </div>
+      <div
+        className="form-group"
+      >
+        <label>
+          Due Date:
+        </label>
+        <input
+          className="form-control"
+          onBlur={[Function]}
+          placeholder="Enter date in the format mm.dd.yyyy"
+          type="text"
+        />
+      </div>
+      <button
+        className="btn btn-primary"
+        type="submit"
+      >
+        Add Todo
+      </button>
+    </form>
+  </div>
+  <div
+    className="loading"
+  >
+    Loading..
+  </div>
 </div>
 `;
