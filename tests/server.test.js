@@ -28,4 +28,19 @@ describe("Server side methods", () => {
         done();
       })
   })
+
+  it("tests add with title that exists", (done) => {
+    request(app)
+      .post("/api/todos")
+      .send({
+        title: "Hey",
+        description: "Throw away the trash",
+        dueDate: new Date("9.01.2017")
+      })
+      .end((err, res) => {
+        expect(res.status).to.equal(500);
+        expect(res.body.message).to.equal("Error occured saving your todo");
+        done();
+      })
+  })
 })
