@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tests for <App /> Component takes a snapshot of the app component 1`] = `
+<div>
+  Hey There
+</div>
+`;
