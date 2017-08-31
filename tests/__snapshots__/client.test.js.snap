@@ -30,7 +30,7 @@ exports[`Tests for <App /> Component takes a snapshot of the app component 1`] =
         </label>
         <input
           className="form-control"
-          onBlur={[Function]}
+          onChange={[Function]}
           placeholder="Enter todo title"
           type="text"
         />
@@ -43,7 +43,7 @@ exports[`Tests for <App /> Component takes a snapshot of the app component 1`] =
         </label>
         <input
           className="form-control"
-          onBlur={[Function]}
+          onChange={[Function]}
           placeholder="Enter todo description"
           type="text"
         />
@@ -56,7 +56,7 @@ exports[`Tests for <App /> Component takes a snapshot of the app component 1`] =
         </label>
         <input
           className="form-control"
-          onBlur={[Function]}
+          onChange={[Function]}
           placeholder="Enter date in the format mm.dd.yyyy"
           type="text"
         />
