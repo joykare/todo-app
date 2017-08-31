@@ -1,7 +1,7 @@
 const app = require("../index.js");
 const expect = require("chai").expect;
 const request = require("supertest");
-const seed = require("../util/seed.js");
+
 describe("Server side methods", () => {
   it("tests find todos method", (done) => {
     request(app)

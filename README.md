@@ -4,13 +4,14 @@
 
 - MongoDB
 - NodeJS
-- Jest 
+- Jest
 - Mocha
 
-### Installation 
+### Installation
 - Clone project
 - On the project root run `npm install` to install dependencies
+- Start up Mongo server `mongod`
 - To start backend `npm start`. You must have `nodemon` installed, OR  run `node index.js`
-- To start frontend `npm run start-fend` 
+- To start frontend `npm run start-fend`
 - To run backend tests `mocha tests/server.test.js`
 - To run frontend tests `jest tests/client.test.js`
