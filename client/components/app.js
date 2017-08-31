@@ -34,7 +34,7 @@ class App extends Component {
       .send({
         title: this.state.title,
         description: this.state.description,
-        dueDate: new Date(this.state.date)
+        dueDate: new Date(`${this.state.date}`)
       })
       .then((res) => {
         // console.log("todos", res.body);
