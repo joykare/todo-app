@@ -83,7 +83,7 @@ class App extends Component {
                 type="text"
                 className="form-control"
                 placeholder="Enter todo title"
-                onBlur={(event) => {
+                onChange={(event) => {
                   this.setState({
                     title: event.target.value
                   })
@@ -97,7 +97,7 @@ class App extends Component {
                 type="text"
                 className="form-control"
                 placeholder="Enter todo description"
-                onBlur={(event) => {
+                onChange={(event) => {
                   this.setState({
                     description: event.target.value
                   })
@@ -111,7 +111,7 @@ class App extends Component {
                 type="text"
                 className="form-control"
                 placeholder="Enter date in the format mm.dd.yyyy"
-                onBlur={(event) => {
+                onChange={(event) => {
                   this.setState({
                     date: event.target.value
                   })
