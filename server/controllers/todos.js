@@ -23,10 +23,11 @@ module.exports = {
   },
 
   edit: (req, res) => {
-    const todoId =  req.params.todoId;
+    const todoId =  req.params.id;
+
     Todos.findOne({
       _id: todoId
-    }).exec((err, todo) => {
+    }, (err, todo) => {
       if (err) {
         res.status(500).send({
           message: 'An error occured when finding your todo'
