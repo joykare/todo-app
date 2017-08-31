@@ -26,6 +26,7 @@ class App extends Component {
     this.fetchTodos();
   }
 
+  // Fetches all todos from serve
   fetchTodos() {
     request
       .get("http://localhost:3000/api/todos")
@@ -37,6 +38,7 @@ class App extends Component {
       })
   }
 
+  // Add a todo
   handleSubmit = (event) => {
     event.preventDefault();
     // console.log("date", this.state.date);
@@ -53,6 +55,7 @@ class App extends Component {
       })
   }
 
+  // Edits a todo completed value to true
   handleComplete = (id) => {
     request
     .post(`http://localhost:3000/api/todos/${id}`)
