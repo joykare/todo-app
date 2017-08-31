@@ -29,12 +29,13 @@ class App extends Component {
 
   handleSubmit = (event) => {
     event.preventDefault();
+    // console.log("date", this.state.date);
     request
       .post("http://localhost:3000/api/todos")
       .send({
         title: this.state.title,
         description: this.state.description,
-        dueDate: new Date(this.state.date)
+        dueDate: new Date(`${this.state.date}`)
       })
       .then((res) => {
         // console.log("todos", res.body);
@@ -43,7 +44,7 @@ class App extends Component {
   }
 
   render() {
-    // console.log("this.state", this.state.todos);
+    console.log("this.state", this.state.todos);
     return (
       <div>
         <div className="text-center">
