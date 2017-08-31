@@ -9,6 +9,10 @@ const TodosSchema = mongoose.Schema({
   description: String,
   dueDate: {
     type: Date
+  },
+  completed: {
+    type: Boolean,
+    default: false
   }
 })
 

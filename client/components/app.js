@@ -44,7 +44,7 @@ class App extends Component {
   }
 
   render() {
-    console.log("this.state", this.state.todos);
+    // console.log("this.state", this.state.todos);
     return (
       <div>
         <div className="text-center">
