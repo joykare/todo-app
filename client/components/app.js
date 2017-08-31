@@ -60,13 +60,13 @@ class App extends Component {
       completed: true
     })
     .then((res) => {
-      console.log("complete", res.body);
+      // console.log("complete", res.body);
       this.fetchTodos();
     })
   }
 
   render() {
-    console.log("this.state", this.state.todos);
+    // console.log("this.state", this.state.todos);
     return (
       <div>
         <div className="text-center">

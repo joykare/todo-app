@@ -2,7 +2,7 @@ module.exports = {
   todos: [{
     "title": "Blah",
     "description": "this is so cool",
-    "dueDate": new Date("01.09.2017")
+    "dueDate": new Date("12.09.2017")
   }, {
     "title": "Blah2",
     "description": "Read Game of thrones",
